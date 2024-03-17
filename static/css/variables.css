@@ -1,0 +1,258 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@100;300;400;500;700&display=swap');
+
+/* Variables */
+:root {
+  /* Fonts */
+  --headings: 'Philosopher', sans-serif;
+  --para: 'Poppins', sans-serif;
+
+  /* Colors */
+  --primary: #de8c18;
+  --secondary: #fff;
+  --tertiary: #6AC50B;
+  --dark-alt: #6c6c6c;
+  --black: #1e1e1e;
+  --light: #fff;
+  --light-alt: #f5f4ff;
+  --white: #ffffff;
+  --text-colour: #403F3F;
+
+  /* Shadow */
+  --shadow: 0px 4px 20px 0px #ccc7ff;
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-color: var(--primary) transparent;
+  scrollbar-width: thin;
+}
+
+
+*::selection {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--white);
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark);
+  line-height: 160%;
+  /* margin: 0 !important; */
+  letter-spacing: 0.5px;
+  font-family: var(--para);
+}
+
+p a {
+  color: var(--primary);
+  transition: 0.5s ease all;
+}
+
+p a:hover {
+  color: var(--secondary);
+}
+
+/* Background */
+.bg-primary {
+  background: var(--primary) !important;
+}
+
+.bg-secondary {
+  background: var(--secondary) !important;
+}
+
+.bg-light {
+  background: var(--white) !important;
+}
+
+.bg-light-alt {
+  background: var(--light-alt) !important;
+}
+
+.bg-dark {
+  background: var(--dark) !important;
+}
+
+.bg-dark-alt {
+  background: var(--dark-alt) !important;
+}
+
+.bg-black {
+  background: var(--black) !important;
+}
+
+/* Color */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.text-light {
+  color: var(--white) !important;
+}
+
+.text-light-alt {
+  color: var(--light-alt) !important;
+}
+
+.text-dark {
+  color: var(--dark) !important;
+}
+
+.text-dark-alt {
+  color: var(--dark-alt) !important;
+}
+
+.text-black {
+  color: var(--black) !important;
+}
+
+/* Section */
+.section {
+  width: 100%;
+  padding: 80px 0;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.section .container,
+.section .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1360px;
+  }
+}
+
+.container-1300 {
+  max-width: 1300px;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 10px 25px;
+  outline: 0;
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  font-family: var(--para);
+  font-size: 16px;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.button:hover {
+  border: 1px solid var(--primary);
+  background-color: var(--secondary);
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+
+
+
+
+/* Headings */
+.sub-heading {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: var(--headings);
+  margin-bottom: 15px;
+  /* color: var(--primary); */
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--black);
+  font-family: var(--headings);
+}
+
+@media screen and (max-width:768px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+}
+
+.tertiary-heading {
+  font-size: 18px;
+  font-family: var(--para) !important;
+}

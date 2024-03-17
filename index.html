@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shree Urja</title>
+  <!-- Links -->
+
+  <!-- CDNS -->
+  <link rel="stylesheet" href="./static/css/aos.css" />
+  <link rel="stylesheet" href="./static/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./static/css/owl.theme.default.min.css" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./static/css/style.css" />
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+  <!-- Local files (Style) -->
+  <!-- SITE KEY & ReCaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfLaWUoAAAAAI3Z_PbmTI2JAUmnv6IS4-l-moPH"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="500">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand ms-3" href="#">
+          <img src="./static/images/urja_dham.jpg" class="brand-logo-image" alt="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fal fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  mb-2">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services-section">Treatments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+          </ul>
+          <div class="call-button">
+            <li class="nav-item w-100">
+              <a class="nav-link" href="tel:8987543210">
+                <div class="d-flex align-items-center justify-content-center gap-4">
+                  <i class="fal fa-phone-alt"></i>
+                  <div>
+                    <span>Call Us Now !</span>
+                    <p>8987543210</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Modal -->
+  <div class="modal fade appointmentModal" id="appointmentModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="dismiss-btn" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fal fa-times"></i>
+          </button>
+          <form method="POST" action="./contact-form-handler.php">
+            <h4 class="mb-4">Have a question? <br />Contact Us</h4>
+            <input type="hidden" name="type" class="hidden-value" value="Any" />
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingName" placeholder="Full Name" name="name" required />
+              <label for="floatingName"> Full Name <span>*</span> </label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="floatingPhone" placeholder="Mobile Number" name="phone"
+                required />
+              <label for="floatingPhone">
+                Mobile Number <span>*</span>
+              </label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingEmail" placeholder="Email Address" name="email" />
+              <label for="floatingEmail"> Email Address </label>
+            </div>
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse" />
+            <script>
+              // SITE KEY
+              grecaptcha.ready(function () {
+                grecaptcha
+                  .execute("6LfLaWUoAAAAAI3Z_PbmTI2JAUmnv6IS4-l-moPH", {
+                    action: "contact",
+                  })
+                  .then(function (token) {
+                    var recaptchaResponse =
+                      document.getElementById("recaptchaResponse");
+                    recaptchaResponse.value = token;
+                  });
+              });
+            </script>
+            <button type="submit" class="button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div id="heroCarousel" data-bs-interval="6000" data-bs-pause="false"
+      class="carousel slide carousel-fade h-100 w-100" data-bs-ride="carousel">
+      <div class="carousel-inner w-100 h-100">
+        <div class="carousel-item active w-100 h-100">
+          <img src="./static/images/images/hero_slider/03.jpg" class="d-block w-100" alt="..." />
+          <div class="container slide-one">
+            <div class="hero-text">
+              <h2 class="heading">
+                <span class="golden-text">Specialized Ayurvedic</span> Treatments
+              </h2>
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item w-100 h-100">
+          <img src="./static/images/images/hero_slider/02.jpg" class="d-block w-100" alt="..." />
+          <div class="container slide-two">
+            <div class="hero-text">
+              <h2 class="heading">
+                <span class="golden-text">Sooth The Body</span> with Ayurveda
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item w-100 h-100">
+          <img src="./static/images/images/hero_slider/04.jpg" class="d-block w-100" alt="..." />
+          <div class="container slide-three">
+            <div class="hero-text">
+              <h2 class="heading">
+                <span class="golden-text">Experienced Chiropractic</span> Treatments
+              </h2>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Hero -->
+
+  <!-- CARDS SECTION -->
+  <section class="section shree-cards">
+    <div class="container">
+      <div class="row g-4">
+        <h2 class="heading" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">Our <span
+            class="golden-text">Services</span></h2>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+          <div class="p-3 card">
+            <img src="./static/images/shree_cards/ayurveda.jpg" alt="">
+            <h2 class="sub-heading">Ayurved</h2>
+            <p class="card-text">
+              Ayurveda means Science of life. It recommends methods for appropriate living and longevity. It includes
+              maintaining good health as well as dealing with illness through Yoga, treatments, herbal medicines and
+              lifestyle changes
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">
+          <div class="p-3 card">
+            <img src="./static/images/shree_cards/panchkarma.jpg" alt="">
+            <h2 class="sub-heading">Panchkarma</h2>
+            <p class="card-text">
+              Panchakarma is an Ayurvedic therapeutic approach for the body, mind, and consciousness that detoxifies and
+              rejuvenates.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1100">
+          <div class="p-3 card">
+            <img src="./static/images/shree_cards/yog.jpg" alt="">
+            <h2 class="sub-heading">Yog</h2>
+            <p class="card-text">
+              Yoga therapy is a mind-body practice that focuses on your physical, emotional and mental health. It uses
+              yoga postures, breathing exercises, and meditation to improve mental and physical health.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1300">
+          <div class="p-3 card">
+            <img src="./static/images/shree_cards/bone_setting_4.jpeg" alt="">
+            <h2 class="sub-heading">Bone Setting</h2>
+            <p class="card-text">
+              Traditional bone setting is a natural therapy/manual therapy to rebalance our body and bone structure. It
+              helps improve joint mobility, alleviate pain, and promote healing.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1500">
+          <div class="p-3 card">
+            <img src="./static/images/shree_cards/cupping.jpg" alt="">
+            <h2 class="sub-heading">Cupping</h2>
+            <p class="card-text">
+              Cupping is an alternative therapy that involves suctioning the skin with glass, plastic or silicone cups.
+              This therapy is used to stimulate blood flow, loosen muscle tension, and promote healing.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1700">
+          <div class="p-3 card">
+            <img src="./static/images/shree_cards/naturopathy_2.jpg" alt="">
+            <h2 class="sub-heading">Naturopathy</h2>
+            <p class="card-text">
+              Naturopathy favors a holistic approach with non-invasive treatment and generally avoids the use of surgery
+              and drugs to heal the body inside out naturally.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CARDS SECTION -->
+
+
+
+  <!-- ABOUT US SECTION -->
+  <section class="section about-us-section" id="about-us">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="500">
+          <div class="left-container">
+            <div class="d-flex justify-content-center gap-4">
+              <img src="./static/images/left1.png" alt="" />
+              <div class="myCard">
+                <div class="borderCard w-100 h-100 d-flex justify-content-center align-items-center flex-column">
+                  <!-- <img src="./static/images/icons/leaf.svg" class="leaf mb-3" alt="leaf" />
+                  <h3 class="tertiary-heading text-center"> Renew yourself with <br />
+                    <span class="golden-text"> Ayurveda</span>
+                  </h3>
+                  <p class="card-text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  </p> -->
+                  <img src="./static/images/footer_logo.png" alt="">
+                </div>
+              </div>
+              <img src="./static/images/left2.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 right-box">
+          <div class="right-container">
+            <h6 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500" class="">
+              WHO WE ARE
+            </h6>
+            <h2 class="heading" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+              The <span class="golden-text">natural way</span> <br />
+              to achieving balance and optimal
+              <span class="golden-text">health</span>
+            </h2>
+            <p class="mt-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">
+              We at Shree Urja Ayur Dham are dedicated to reviving the age-old wisdom of Ayurveda and guiding you on a
+              journey towards holistic well-being. With a profound understanding of Ayurvedic principles and a team of
+              experienced practitioners, we offer personalized and natural solutions to promote health, harmony, and
+              balance in your life.
+            </p>
+            <div class="row mt-3 gy-3">
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fas fa-check"></i>
+                  <h6>100% Organic Herbal </h6>
+                </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fas fa-check"></i>
+                  <h6>Professional Therapist </h6>
+                </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fas fa-check"></i>
+                  <h6>Hereditary Recipe </h6>
+                </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1100">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fas fa-check"></i>
+                  <h6>24/7 Customer Support </h6>
+                </div>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+              <a class="button mt-5" href="./about.html"> More About Us </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT  US SECTION -->
+
+  <!--   AYURVEDA  SECTION -->
+  <section class="ayurveda section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  col-md-12  col-sm-12">
+          <div class="ayurveda-text">
+            <h2 class="heading" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+              Unlock the secrets to living well with ayurveda
+            </h2>
+            <p class="mt-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+              Living well with Ayurveda involves embracing the principles and practices of this ancient holistic system
+              of medicine to promote balance, health, and overall well-being. Ayurveda emphasizes the interconnectedness
+              of the mind, body, and spirit, and it offers guidelines for maintaining harmony and preventing imbalances.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--   AYURVEDA  SECTION -->
+
+  <!-- SERVICES SECTION-->
+
+  <section class="services-section section" id="services-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+          <div class="info">
+            <h6>WHAT WE OFFER</h6>
+            <h2 class="heading">
+              A <span class="golden-text">holistic</span> journey to harmony
+            </h2>
+            <p class="my-4">
+              Ayurveda essentially means the knowledge of life. It is a precise combination of science and the art of
+              healthy living. Ayurveda is popular for its extensive natural healing
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+          <div class="services-cards">
+            <div class="icon">
+              <img src="./static/images/icons/yoga.svg" alt="" />
+            </div>
+            <div class="card-text mt-3">
+              <h3 class="card-heading">Arthritis</h3>
+              <p>
+                Arthritis causes joing pain, stiffness and swelling in joints of any part of the body. Our ancient
+                methods of treatment have resulted in relief for several of our patients
+              </p>
+            </div>
+            <div class="right-icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">
+          <div class="services-cards">
+            <div class="icon">
+              <img src="./static/images/icons/yoga.svg" alt="" />
+            </div>
+            <div class="card-text mt-3">
+              <h3 class="card-heading">Thyroid Disorders</h3>
+              <p>
+                Thyroid disorders are conditions that affect the thyroid gland, if you have thyroid disorder its
+                important consult an ayurvedic doctor at shree urja ayurdham.
+              </p>
+            </div>
+            <div class="right-icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">
+          <div class="services-cards">
+            <div class="icon">
+              <img src="./static/images/icons/yoga.svg" alt="" />
+            </div>
+            <div class="card-text mt-3">
+              <h3 class="card-heading">Hypertension</h3>
+              <p>
+                Hypertension, commonly known as high blood pressure is a silent killer. Ayurveda believes it is best to
+                treat the root cause rather than treat the symptoms only.
+              </p>
+            </div>
+            <div class="right-icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1100">
+          <div class="services-cards">
+            <div class="icon">
+              <img src="./static/images/icons/yoga.svg" alt="" />
+            </div>
+            <div class="card-text mt-3">
+              <h3 class="card-heading">Piles</h3>
+              <p>
+                According to Ayurveda, piles, fissures, and the digestive concerns leading to them are associated with
+                the three Doshas, Vata, Pitta and Kapha. Ayurvedic treatments are effective in treating piles
+              </p>
+            </div>
+            <div class="right-icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1300">
+          <div class="services-cards">
+            <div class="icon">
+              <img src="./static/images/icons/yoga.svg" alt="" />
+            </div>
+            <div class="card-text mt-3">
+              <h3 class="card-heading">Diabetes</h3>
+              <p>
+
+                Ayurveda approaches diabetes treatment through a combination of dietary changes, lifestyle
+                modifications, herbal remedies, and specific therapies. It's important to note that while some people
+                may find Ayurvedic treatments helpful
+              </p>
+            </div>
+            <div class="right-icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1300">
+          <div class="services-cards">
+            <div class="icon">
+              <img src="./static/images/icons/yoga.svg" alt="" />
+            </div>
+            <div class="card-text mt-3">
+              <h3 class="card-heading">Asthama</h3>
+              <p>
+                Asthma is a chronic respiratory condition that affects the airways in the lungs. Ayurveda, the
+                traditional system of medicine from India, offers holistic approaches to managing asthma.
+              </p>
+            </div>
+            <div class="right-icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1300">
+          <div class="services-cards">
+            <div class="icon">
+              <img src="./static/images/icons/yoga.svg" alt="" />
+            </div>
+            <div class="card-text mt-3">
+              <h3 class="card-heading">Liver Disorder</h3>
+              <p>
+                Ayurveda treatment helps to treat the root cause of liver disorder disease nectar-like herbs of Ayurveda
+                stop further scarring of liver tissue and it may regenerate liver cell. Remove accumulated toxins from
+                the body.
+              </p>
+            </div>
+            <div class="right-icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1300">
+          <div class="services-cards">
+            <div class="icon">
+              <img src="./static/images/icons/yoga.svg" alt="" />
+            </div>
+            <div class="card-text mt-3">
+              <h3 class="card-heading">Insomnia</h3>
+              <p>
+                According to Ayurveda treatment, the vitiation of the three doshas either taken together or individually
+                may result in insomnia. Ayurvedic treatment helps to balance these doshas for eliminating root cause of
+                the problem.
+              </p>
+            </div>
+            <div class="right-icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVUCES SECTION-->
+
+  <!-- OFFERS SECTION -->
+  <section class="offers" id="offers-section">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-lg-8">
+          <div class="content">
+            <h6 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+              WHAT WE OFFER
+            </h6>
+            <h2 class="heading mt-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+              Get Authentic <span class="golden-text">Ayurvedic</span>
+              <br />Treatment Today!
+            </h2>
+            <p class="my-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">
+              Ayurveda is based on the principle that to achieve and maintain health over the course of your life, you
+              must re-balancing emotions, improve diet, practice yoga and “pranayama” (breathing exercises), and make
+              lifestyle adjustments.
+            </p>
+            <div class="d-flex button-box gap-3 justify-content-center">
+              <a data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" href="" class="button">Consultation on
+                call</a>
+              <a data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700" href=""
+                class="button appointment-btn">Book An Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="treatmentCarousel" data-bs-interval="5000" data-bs-pause="false"
+      class="carousel slide carousel-fade h-100 w-100" data-bs-ride="carousel">
+      <div class="carousel-inner w-100 h-100">
+        <div class="carousel-item active w-100 h-100">
+          <img src="./static/images/ayurveda.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item w-100 h-100">
+          <img src="./static/images/images/treatment/img_1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item w-100 h-100">
+          <img src="./static/images/images/treatment/img_3.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS SECTION -->
+
+  <!-- WHY CHOOSE US -->
+  <section class="section why-choose-us" id="why-choose-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  left-box">
+          <div class="text">
+            <h6 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+              WHY CHOOSE US
+            </h6>
+            <h2 class="heading" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="900">
+              Nature’s <span class="golden-text">secret</span> for your truly
+              health
+            </h2>
+            <p class="mt-1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1100">
+              we are dedicated to reviving the age-old wisdom of Ayurveda and guiding you on a journey towards holistic
+              well-being.
+            </p>
+            <div class="d-flex gap-3 mt-5 mb-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h6>Authenticity:</h6>
+                <p>
+                  We adhere to the authentic teachings of Ayurveda, staying true to the principles that have guided
+                  holistic wellness for centuries.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mt-3 mb-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h6>Natural Healing</h6>
+                <p>
+                  We promote natural healing through the use of herbal remedies, dietary adjustments, and holistic
+                  therapies that support your body's innate healing capacity.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mt-3 mb-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1700">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h6>Personalized Approach</h6>
+                <p>
+                  ecognizing that each individual is unique, we provide tailored treatments and recommendations that
+                  address your specific needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="700">
+          <div class="image">
+            <img src="./static/images/panchkarma.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- WHY CHOOSE US -->
+  <!-- TESTIMONIALS SECTION -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="heading golden-text text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+        Testimonials
+      </h2>
+      <div class="row mt-5">
+        <div class="testimonial-carousel owl-carousel">
+          <div class="carousel-card h-100">
+            <i class="fas fa-quote-right"></i>
+            <p class="mb-3">
+              After many treatments I had received no results, but since the
+              time I have visited Shree Urja Ayurdham with in 3 months time my
+              varicose veins issue has been reduced. Even my skin disease has
+              reduced. I am happy with the results.
+            </p>
+            <h6>Manohar Shivram Deshmukh</h6>
+            <small>(Issue : Vericose Veins & Skin Disease)</small>
+          </div>
+          <div class="carousel-card h-100">
+            <i class="fas fa-quote-right"></i>
+            <p class="mb-3">
+              Had tried different treatment for 2 -3 months, but got no
+              results. My nephew suggested Shree Urja Ayurdham at Dombivali, I
+              tried bone setting and multiple theraphies. Was relieved from
+              the pain and got 75% positive results.
+            </p>
+            <h6>Prachi Pathak</h6>
+            <small>(Issue: Frozen Shoulder)</small>
+          </div>
+          <div class="carousel-card h-100">
+            <i class="fas fa-quote-right"></i>
+            <p class="mb-3">
+              I have been having issues in Neck and Lower back. Tried
+              Panchkarma sessions, but did not get desired results. I could
+              not sit on floor. But when i visited Shree Urja , they provided
+              me with proper massages and different therapies, due to which i
+              have not used neck belt and back belt and can sit on floor
+              easily. I can travel alone and have been facing these issues
+              since 40 years. Now i am 70 year old and walk a lot and travel.
+              I would recomment anyone who is facing issues, please visit
+              Shree Urja Ayurdham.
+            </p>
+            <h6>Vishwasini Mahadik</h6>
+            <small style="visibility: hidden;">(Issue: Frozen Shoulder)</small>
+          </div>
+          <div class="carousel-card h-100">
+            <i class="fas fa-quote-right"></i>
+            <p class="mb-3">
+              After many treatments I had received no results, but since the
+              time I have visited Shree Urja Ayurdham with in 3 months time my
+              varicose veins issue has been reduced. Even my skin disease has
+              reduced. I am happy with the results.
+            </p>
+            <h6>Manohar Shivram Deshmukh</h6>
+            <small>(Issue : Vericose Veins & Skin Disease)</small>
+          </div>
+          <div class="carousel-card h-100">
+            <i class="fas fa-quote-right"></i>
+            <p class="mb-3">
+              Had tried different treatment for 2 -3 months, but got no
+              results. My nephew suggested Shree Urja Ayurdham at Dombivali, I
+              tried bone setting and multiple theraphies. Was relieved from
+              the pain and got 75% positive results.
+            </p>
+            <h6>Prachi Pathak</h6>
+            <small>(Issue: Frozen Shoulder)</small>
+          </div>
+          <div class="carousel-card h-100">
+            <i class="fas fa-quote-right"></i>
+            <p class="mb-3">
+              I have been having issues in Neck and Lower back. Tried
+              Panchkarma sessions, but did not get desired results. I could
+              not sit on floor. But when i visited Shree Urja , they provided
+              me with proper massages and different therapies, due to which i
+              have not used neck belt and back belt and can sit on floor
+              easily. I can travel alone and have been facing these issues
+              since 40 years. Now i am 70 year old and walk a lot and travel.
+              I would recomment anyone who is facing issues, please visit
+              Shree Urja Ayurdham.
+            </p>
+            <h6>Vishwasini Mahadik</h6>
+            <small style="visibility: hidden;">(Issue: Frozen Shoulder)</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TESTIMONIALS SECTION -->
+
+  <!-- APPOINTMENT BOX SECTION -->
+
+  <section class="appointment-box">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="appointment-card">
+            <div class="row align-items-center">
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1200">
+                <h2 class="heading">
+                  Get in touch to book your first
+                  <span class="golden-text">appointment</span>
+                </h2>
+              </div>
+              <div class="col-lg-3"></div>
+              <div class="col-lg-3 appointment-button" data-aos="zoom-in" data-aos-duration="1200">
+                <button type="button" class="button ms-auto" data-bs-toggle="modal"
+                  data-bs-target="#appointmentModal">BOOK
+                  AN
+                  APPOINTMENT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT BOX SECTION -->
+
+  <!-- FOOTER -->
+  <section class="footer section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="d-flex justify-content-center align-content-center flex-column gap-4">
+            <div class="logo">
+              <img src="./static/images/footer_logo.png" alt="" />
+            </div>
+            <p class="text-white text-center">
+              We are dedicated to reviving the age-old wisdom of Ayurveda and guiding you on a journey towards holistic
+              well-being.
+            </p>
+            <div class="info-box mt-6">
+              <div class="row g-4">
+                <div class="d-flex flex-column col-lg-4  align-items-center text-center gap-3">
+                  <i class="fal fa-envelope"></i>
+                  <a href="mailto:info@company.com">info@shreeurjayurdham.com</a>
+                </div>
+                <div class="d-flex flex-column col-lg-4 align-items-center text-center gap-3">
+                  <i class="fal fa-phone-alt"></i>
+                  <a href="tel:22 02 2202">+91 093736 77971</a>
+                </div>
+                <div class="d-flex flex-column col-lg-4 align-items-center text-center gap-3">
+                  <i class="fal fa-map"></i>
+                  <p class="m-0">Shri Samarth Krupa,<br> 792, Near Baithak Hall, <br> At. Post- Kharbav </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <section class="copyright">
+    <div class="container">
+      <p class="m-0 ">
+        All Rights Reserved | Powered by <a href="#">Parasight Solutions</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+
+  <script src="./static/js/bootstrap.bundle.min.js"></script>
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- CDNS -->
+  <!-- Local Files (App) -->
+  <script src="./static/js/owl.carousel.js"></script>
+  <script src="./static/js/slick.min.js"></script>
+  <script src="./static/js/aos.js"></script>
+  <script src="./static/js/app.js"></script>
+  <!-- Script Tag -->
+
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    $(".testimonial-carousel").owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+        },
+        1000: {
+          items: 3,
+        },
+      },
+    });
+  </script>
+</body>
+</html>
